@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="274" height="274">
+  <svg width="274" height="274" version="1.1" viewBox="0 0 72.496 72.496" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <metadata>
+    <rdf:rdf>
+     <cc:work rdf:about="">
+      <dc:format>image/svg+xml</dc:format>
+      <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"></dc:type>
+      <dc:title></dc:title>
+     </cc:work>
+    </rdf:rdf>
+    </metadata>
+    <g transform="translate(0 -224.5)">
+      <g transform="matrix(3.5077 0 0 3.3012 -284.08 -241.18)" fill="#3a7fff" stroke="#3a7fff">
+       <path d="m90.504 146.77s1.6836 4.1597-1.0848 9.0417l-7.8706 5.0897s2.4959-6.6183 4.1232-8.964 4.8322-5.1673 4.8322-5.1673z" stroke-width=".54095"></path>
+       <path d="m92.621 146.77s-1.816 4.1037 0.79462 9.0718l7.7036 5.3391s-2.2826-6.6949-3.834-9.0915c-1.5513-2.3966-4.6642-5.3194-4.6642-5.3194z" stroke-width=".54095"></path>
+       <ellipse cx="91.215" cy="145.99" rx="3.3734" ry="3.5057" stroke-linecap="round" stroke-width=".5124"></ellipse>
+      </g>
+    </g>
+  </svg>
+  <style>@media (prefers-color-scheme: light) { :root { filter: none; } }
+  @media (prefers-color-scheme: dark) { :root { filter: contrast(0.3846153846153846) brightness(4.5); } }
+  </style>
+</svg>

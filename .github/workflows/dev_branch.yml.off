@@ -1,0 +1,23 @@
+name: Dev branch workflow
+
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  call-lint:
+    uses: $GITHUB_REPOSITORY/.github/workflows/lint.yml
+
+  call-test:
+    uses: $GITHUB_REPOSITORY/.github/workflows/test.yml
+
+  call-push-images:
+    uses: $GITHUB_REPOSITORY/.github/workflows/push_images.yml
+    with:
+      DOCKER_IMAGE_NAME: dev-website-basic-image
+      REPO_SHA: ${{ github.sha }}
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+      DOCKER_IMAGE_CONTEXT: ./frontend
+      DOCKER_FILE_PATH: ./frontend/Dockerfile.next

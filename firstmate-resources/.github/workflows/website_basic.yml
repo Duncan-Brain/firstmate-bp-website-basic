@@ -1,0 +1,30 @@
+# Arbitrary change:
+# Arbitrary change reason: https://github.community/t/github-actions-dynamic-name-of-the-workflow-with-workflow-dispatch/150327
+# Arbitrary change alternatives: https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions
+
+name: Update Website Basic
+
+on:
+  push:
+    branch:
+      - update-website-basic
+
+env:
+  PROJ_REPO_PATH: $GITHUB_ACTOR/website-basic
+  DEPLOY_SCRIPT_NAME: deploy.sh
+
+jobs:
+  call-deploy-script:
+    uses: $GITHUB_REPOSITORY/.github/workflows/deploy.yml
+    with:
+      REPO: ${{ env.PROJ_REPO_PATH }}
+      DEPLOY_SCRIPT_NAME: ${{ env.DEPLOY_SCRIPT_NAME }}
+      TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
+      DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+
+  call-refresh-ingress-script:
+    uses: $GITHUB_REPOSITORY/.github/workflows/refresh_ingress.yml
+    with:
+      DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}

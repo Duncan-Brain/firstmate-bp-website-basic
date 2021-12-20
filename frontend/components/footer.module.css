@@ -1,0 +1,39 @@
+.Footer {
+  padding: 1rem 2rem 1rem 2rem;
+}
+
+.Footer___topBorder {
+    border-top: 1px;
+    border-right: 0px;
+    border-left: 0px;
+    border-bottom: 0px;
+    border-color: #22242650;
+    border-radius: 1px;
+    border-style: solid;
+}
+
+.LastUpdated_grid__padding{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
+}
+
+.Menu__padding {
+  padding-top: 3rem !important;
+  padding-bottom: 5rem !important;
+}
+
+.Menu___rmBorder{
+  background-color: transparent !important;
+  border: none !important;
+  border-left: none !important;
+  box-shadow: none !important;
+}
+
+.Icon___posLeft {
+    float: none !important;
+    margin-right: 2em !important;
+}
+
+.Icon___rmShadow {
+  box-shadow: none !important;
+}

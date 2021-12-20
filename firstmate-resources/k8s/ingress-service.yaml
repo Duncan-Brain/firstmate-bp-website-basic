@@ -1,0 +1,41 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-service
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+spec:
+  tls:
+  - hosts:
+      - example.ca
+      - www.example.ca
+    secretName: website-basic-crt-secret
+  - hosts:
+      - dev.example.ca
+      - www.dev.example.com
+    secretName: dev-website-basic-crt-secret
+  rules:
+    - host: example.ca
+      http:
+        paths:
+          - path: /?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: website-basic-cluster-ip-service
+                port:
+                  number: 3000
+    - host: dev.example.ca
+      http:
+        paths:
+          - path: /?(.*)
+            pathType: Prefix
+            backend:
+              service:
+                name: dev-website-basic-cluster-ip-service
+                port:
+                  number: 3000

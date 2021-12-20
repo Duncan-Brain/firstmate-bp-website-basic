@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: dev-website-basic-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    component: dev-website-basic-frontend
+  ports:
+    - port: 3000
+      targetPort: 3000

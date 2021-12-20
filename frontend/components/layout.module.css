@@ -1,0 +1,11 @@
+.Body {
+  /*Compensating for static header*/
+  padding-top: 108px !important;
+}
+
+/* Mobile is not static header*/
+@media screen and (max-width: 980px) {
+  .Body {
+    padding-top: 0px !important;
+  }
+}

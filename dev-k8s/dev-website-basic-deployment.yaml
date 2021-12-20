@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dev-website-basic-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      component: dev-website-basic-frontend
+  template:
+    metadata:
+      labels:
+        component: dev-website-basic-frontend
+    spec:
+      containers:
+        - name: dev-website-basic
+          image: DOCKERHUB_USERNAME/dev-website-basic-image
+          ports:
+            - containerPort: 3000
+      imagePullSecrets:
+        - name: regcred

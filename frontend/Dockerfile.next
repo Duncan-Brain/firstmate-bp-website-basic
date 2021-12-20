@@ -1,0 +1,28 @@
+# Based upon discussion in Docker and next.js best practices
+# Docker Best Practices: https://github.com/nodejs/docker-node/blob/main/docs/BestPractices.md#handling-kernel-signals
+# Nextjs Discussion: https://github.com/vercel/next.js/discussions/16995#discussioncomment-132339
+ 
+FROM node:alpine AS builder
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json package-lock.json ./
+RUN npm ci
+COPY . .
+RUN ["node_modules/.bin/next", "build"]
+
+FROM node:alpine
+WORKDIR /app
+ENV NODE_ENV production
+ENV TINI_VERSION v0.19.0
+ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini-static /tini
+RUN chmod +x /tini
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+USER nextjs
+EXPOSE 3000
+COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+ENTRYPOINT ["/tini", "--"]
+CMD ["node_modules/.bin/next", "start"]

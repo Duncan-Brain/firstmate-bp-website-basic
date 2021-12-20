@@ -1,0 +1,38 @@
+.Menu___bottomBorder {
+  border-top: 0px !important;
+  border-right: 0px !important;
+  border-left: 0px !important;
+  border-bottom: 1px !important;
+  border-color: #22242650 !important;
+  border-radius: 1px !important;
+  border-style: solid !important;
+  box-shadow: none !important;
+}
+
+.Menu__staticPosition {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0px !important;
+  z-index: 2 !important;
+}
+
+.Menu__backgroundColor {
+  background-color: #ffffffff !important;
+}
+
+.MenuItem_link__textBlack {
+  color: #000000ff;
+}
+
+.ContributeModal_img__paddingRight {
+  padding-right: 1em !important;
+}
+
+/* Removes static positioning for mobile*/
+@media screen and (max-width: 980px) {
+  .Menu__staticPosition {
+    position: inherit;
+    padding: 0.5em;
+  }
+}

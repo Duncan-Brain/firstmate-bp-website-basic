@@ -1,0 +1,89 @@
+{
+  "categories": [
+    {
+    "category": "basicWebPage",
+    "heading": "Basic Web Page",
+    "boilerplates": [
+      {
+      "heading": "React using NextJS, Semantic, Jest, ESLint",
+      "description": "A React stack with framework, testing, and linting. #TODO Add Redux",
+      "imageSrc": "/images/home-page/next-react-semantic-jest-eslint-web.svg",
+      "status": "Status: Complete - Version: 1.0.0"
+      },
+      {
+      "heading": "Vue using NuxtJS, Semantic, Jest, ESLint",
+      "description": "A Vue stack with framework, testing, and linting. #TODO Add Vuex",
+      "imageSrc": "/images/home-page/nuxt-vue-semantic-jest-eslint-web.svg",
+      "status": "concept"
+      },
+      {
+      "heading": "Angular",
+      "description": "An Angular stack with framework, testing, and linting. #TODO Add State Management",
+      "imageSrc": "/images/home-page/angular-web.svg",
+      "status": "concept"
+      }
+    ]},
+    {
+    "category": "apiWithDatastore",
+    "heading": "API with Datastore",
+    "boilerplates": [
+      {
+      "heading": "Postgres",
+      "description": "A Postgres Datastore.",
+      "imageSrc": "/images/home-page/postgres-web.svg",
+      "status": "concept"
+      },
+      {
+      "heading": "MySQL",
+      "description": "A MySQL Datastore.",
+      "imageSrc": "/images/home-page/mysql-web.svg",
+      "status": "concept"
+      },
+      {
+      "heading": "MongoDB",
+      "description": "A MongoDB Datastore",
+      "imageSrc": "/images/home-page/mongodb-web.svg",
+      "status": "concept"
+      }
+    ]},
+    {
+    "category": "webAppWithDatastore",
+    "heading": "Web App with Datastore",
+    "boilerplates": [
+      {
+      "heading": "Google SSO, Postgres",
+      "description": "A Postgres Datastore Accessed by Google SSO.",
+      "imageSrc": "/images/home-page/google-postgres-web.svg",
+      "status": "concept"
+      }
+    ]},
+    {
+    "category": "dataSciencePipeline",
+    "heading": "Data Science Pipeline",
+    "boilerplates": [
+      {
+      "heading": "Python, Spark, Postgres, getDBT, Jupyter",
+      "description": "A Python based data science pipeline.",
+      "imageSrc": "/images/home-page/python-spark-postgres-getdbt-jupyter-web.svg",
+      "status": "concept"
+      },
+      {
+      "heading": "R, Spark, Postgres, getDBT, Jupyter",
+      "description": "An R based data science pipeline.",
+      "imageSrc": "/images/home-page/r-spark-postgres-getdbt-jupyter-web.svg",
+      "status": "concept"
+      }
+    ]},
+    {
+    "category": "dappWithNode",
+    "heading": "Decentralized App with Node",
+    "boilerplates": [
+      {
+      "heading": "Ethereum, Solidity, Geth, Web3, Truffle",
+      "description": "An Ethereum decentralized app with node.",
+      "imageSrc": "/images/home-page/ethereum-geth-solidity-truffle-web3-web.svg",
+      "status": "concept"
+      }
+    ]}
+  ]
+}

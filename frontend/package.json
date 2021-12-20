@@ -1,0 +1,55 @@
+{
+  "name": "website-basic-node-react-next-jest",
+  "version": "1.0.0-alpha",
+  "description": "A basic web page",
+  "homepage": "https://github.com/Duncan-Brain/firstmate-bp-website-basic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Duncan-Brain/firstmate-bp-website-basic"
+  },
+  "bugs": {
+    "url": "https://github.com/Duncan-Brain/firstmate-bp-website-basic/issues"
+  },
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "lint": "next lint",
+    "build": "next build",
+    "start": "next start",
+    "test": "jest --watch",
+    "test:ci": "jest --ci"
+  },
+  "dependencies": {
+    "next": "^12.0.7",
+    "prop-types": "^15.7.2",
+    "prop-types-exact": "^1.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^2.0.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.16.0",
+    "@babel/preset-react": "^7.16.0",
+    "@next/eslint-plugin-next": "^12.0.7",
+    "@testing-library/jest-dom": "5.14.1",
+    "@testing-library/react": "12.0.0",
+    "@testing-library/user-event": "13.2.1",
+    "babel-jest": "27.0.6",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.2",
+    "eslint-config-next": "latest",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.3.0",
+    "eslint-plugin-jsdoc": "^37.2.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "^5.0.1",
+    "identity-obj-proxy": "3.0.0",
+    "jest": "27.0.6",
+    "raw-loader": "^4.0.2",
+    "react-test-renderer": "17.0.2"
+  }
+}

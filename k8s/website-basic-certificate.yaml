@@ -1,0 +1,14 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: website-basic-crt
+spec:
+  secretName: website-basic-crt-secret
+  dnsNames:
+    - example.ca
+    - www.example.ca
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+    group: cert-manager.io
+  commonName: example.ca

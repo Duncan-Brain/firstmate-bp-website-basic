@@ -1,0 +1,16 @@
+name: Test
+
+on:
+  workflow_call:
+
+jobs:
+  test-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Out Repo
+        uses: actions/checkout@v2
+
+      - name: Build And Test Frontend
+        run: |
+          docker build -t temp-image -f ./frontend/Dockerfile.dev ./frontend
+          docker run temp-image npm test -- --coverage

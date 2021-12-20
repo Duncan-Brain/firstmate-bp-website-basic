@@ -1,0 +1,19 @@
+.Banner {
+  /* grid keeps children compact*/
+  display: grid;
+  /* min-height to keep to prevent margin collapse and center content*/
+  min-height: 607px;
+  width: calc(100vw - 5em);
+  margin: 2em auto 2em;
+  text-align: center;
+  padding: 3em;
+  border-style: solid !important;
+  box-shadow: none !important;
+}
+
+@media screen and (max-width: 980px) {
+  .Banner {
+    min-height: inherit;
+    padding: 1em;
+  }
+}

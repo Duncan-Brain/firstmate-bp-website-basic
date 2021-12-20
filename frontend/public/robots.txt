@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow:
+
+Sitemap: https://example.ca/sitemap.xml

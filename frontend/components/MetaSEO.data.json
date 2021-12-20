@@ -1,0 +1,44 @@
+{
+  "domain": {
+    "locale": "en_CA",
+    "url": "https://example.ca",
+    "author": "Firstmate",
+    "description": "This is a boilerplate project by Firstmate.",
+    "themeColor": "#2d89ef",
+    "pages": {
+      "home": {
+        "title":"Example.ca - The BEST Examples"
+      },
+      "docs": {
+        "title":"Example.ca - Documentation"
+      }
+    },
+    "images": {
+      "defaultIconFullURL": "https://example.ca/images/favicon/android-chrome-192x192.png",
+      "darkmodeFaviconRelURL": "/images/favicon/favicon.svg",
+      "faviconPNGRelURL": "/images/favicon/favicon.png",
+      "appleTouchIconRelURL": "/images/favicon/apple-touch-icon.png",
+      "favicon32RelURL": "/images/favicon/favicon-32x32.png",
+      "favicon16RelURL": "/images/favicon/favicon-16x16.png",
+      "faviconManifestRelURL": "/images/favicon/site.webmanifest",
+      "maskIconRelURL": "/images/favicon/safari-pinned-tab.svg",
+      "shortcutIconRelURL": "/images/favicon/favicon.ico",
+      "msApplcationConfigRelURL": "/images/favicon/browserconfig.xml"
+    },
+    "imageFullURL": "https://example.ca/images/favicon/android-chrome-192x192.png",
+    "twitter": {
+      "imageFullURL": "https://example.ca/images/favicon/android-chrome-192x192.png",
+      "siteHandle": "@companyTwitterHandle",
+      "authorHandle": "@authorTwitterHandle",
+      "videoFullURL": "https://example.ca/videos/twitterVideo.mpeg"
+    },
+    "og": {
+      "imageFullURL": "https://example.ca/images/favicon/mstile-310x150.png",
+      "videoFullURL": "https://example.ca/videos/ogVideo.mpeg"
+    },
+    "facebook": {
+      "userID": "facebookUserId",
+      "appID": "facebookAppID"
+    }
+  }
+}

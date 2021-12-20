@@ -1,0 +1,17 @@
+name: Master branch workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  call-push-images:
+    uses: $GITHUB_REPOSITORY/.github/workflows/push_images.yml
+    with:
+      DOCKER_IMAGE_NAME: website-basic-image
+      REPO_SHA: ${{ github.sha }}
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+      DOCKER_IMAGE_CONTEXT: ./frontend
+      DOCKER_FILE_PATH: ./frontend/Dockerfile.next

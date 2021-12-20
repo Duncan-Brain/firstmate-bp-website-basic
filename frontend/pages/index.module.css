@@ -1,0 +1,34 @@
+.Banner_grid {
+  min-height: inherit;
+}
+
+.Anchor {
+  display: block;
+  position: relative;
+  top: calc(-108px - 4rem);
+  visibility: hidden;
+}
+
+.Anchor__topIsCustom {
+  display: block;
+  position: relative;
+  top: calc(-208px - 4rem);
+  visibility: hidden;
+}
+
+.Banner_p__textColor, .Banner_p__textColor > a {
+  color: #ffffffff;
+}
+
+.ContactBanner__margin {
+  margin: 100px auto;
+}
+
+@media screen and (max-width: 980px) {
+  .Anchor {
+    top: calc(-8px - 2rem);
+  }
+  .Anchor__topIsCustom {
+    top: calc(-108px - 2rem);
+  }
+}
