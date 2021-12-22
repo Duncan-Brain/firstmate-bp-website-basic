@@ -13,6 +13,9 @@ module.exports = {
     '!**/*.d.ts',
     '!**/node_modules/**',
   ],
+  coveragePathIgnorePatterns: [
+    '/opt/',
+  ],
   moduleNameMapper: {
     // Handle CSS imports (with CSS modules)
     // https://jestjs.io/docs/webpack#mocking-css-modules

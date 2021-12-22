@@ -1,6 +1,7 @@
 # Arbitrary change:
 # Arbitrary change reason: https://github.community/t/github-actions-dynamic-name-of-the-workflow-with-workflow-dispatch/150327
 # Arbitrary change alternatives: https://stackoverflow.com/questions/58933155/manual-workflow-triggers-in-github-actions
+# 'uses' only accepts static path: https://github.community/t/ref-head-in-reusable-workflows/203690/10
 
 name: Update Dev Website Basic
 
@@ -9,22 +10,20 @@ on:
     branch:
       - update-dev-website-basic
 
-env:
-  PROJ_REPO_PATH: $GITHUB_ACTOR/website-basic
-  DEPLOY_SCRIPT_NAME: dev-deploy.sh
-
 jobs:
   call-deploy-workflow:
-    uses: $GITHUB_REPOSITORY/.github/workflows/deploy.yml
+    uses: my-github-name/my-firstmate-repo/.github/workflows/deploy.yml@master
     with:
-      REPO: ${{ env.PROJ_REPO_PATH }}
-      DEPLOY_SCRIPT_NAME: ${{ env.DEPLOY_SCRIPT_NAME }}
+      REPO: my-github-name/website-basic
+      REF: dev
+      DEPLOY_SCRIPT_NAME: dev-deploy.sh
+    secrets:
       TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
       DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
 
   call-refresh-ingress-workflow:
-    uses: $GITHUB_REPOSITORY/.github/workflows/refresh_ingress.yml
-    with:
+    uses: my-github-name/my-firstmate-repo/.github/workflows/refresh_ingress.yml@master
+    secrets:
       DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}

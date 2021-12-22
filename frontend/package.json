@@ -1,14 +1,14 @@
 {
-  "name": "website-basic-node-react-next-jest",
+  "name": "firstmate-website-basic-react-next",
   "version": "1.0.0-alpha",
-  "description": "A basic web page",
-  "homepage": "https://github.com/Duncan-Brain/firstmate-bp-website-basic",
+  "description": "A basic web page using ReactJS and NextJS",
+  "homepage": "https://github.com/Duncan-Brain/firstmate-website-basic-next-react",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Duncan-Brain/firstmate-bp-website-basic"
+    "url": "https://github.com/Duncan-Brain/firstmate-website-basic-next-react"
   },
   "bugs": {
-    "url": "https://github.com/Duncan-Brain/firstmate-bp-website-basic/issues"
+    "url": "https://github.com/Duncan-Brain/firstmate-website-basic-next-react/issues"
   },
   "main": "index.js",
   "private": true,
@@ -18,7 +18,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --watch",
-    "test:ci": "jest --ci"
+    "test:ci": "jest --ci --coverage"
   },
   "dependencies": {
     "next": "^12.0.7",

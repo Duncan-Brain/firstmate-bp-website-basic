@@ -1,3 +1,5 @@
+# 'uses' only accepts static path: https://github.community/t/ref-head-in-reusable-workflows/203690/10
+
 name: Dev branch workflow
 
 on:
@@ -7,13 +9,13 @@ on:
 
 jobs:
   call-lint:
-    uses: $GITHUB_REPOSITORY/.github/workflows/lint.yml
+    uses: my-github-name/website-basic/.github/workflows/lint.yml@dev
 
   call-test:
-    uses: $GITHUB_REPOSITORY/.github/workflows/test.yml
+    uses: my-github-name/website-basic/.github/workflows/test.yml@dev
 
   call-push-images:
-    uses: $GITHUB_REPOSITORY/.github/workflows/push_images.yml
+    uses: my-github-name/website-basic/.github/workflows/push_images.yml@dev
     with:
       DOCKER_IMAGE_NAME: dev-website-basic-image
       REPO_SHA: ${{ github.sha }}
