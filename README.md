@@ -1,15 +1,15 @@
 # Firstmate: Website Basic (react-next-semantic-jest-eslint)
-To be used with <a href="https://github.com/Duncan-Brain/firstmate" style="color: blue; text-decoration: underline; text-decoration-style: dotted;">Firstmate Controller</a. A simple website with testing and linting.
+To be used with <a href="https://github.com/Duncan-Brain/firstmate" style="color: blue; text-decoration: underline; text-decoration-style: dotted;">Firstmate Controller</a>. A simple website with testing and linting.
 
 | Table of Contents |
 | --- |
-| 1. [Primary Stack](#primary-stack) |
-| 2. [Other Tools](#also-includes) |
-| 3. [Deployment Instructions](#deployment-instructions)
-| 4. [Basic Development Usage](#basic-development-usage) |
-| 5. [Style Guides](#style-guides) |
+| 1. [Stack](#stack) |
+| 2. [Deployment Instructions](#deployment-instructions)
+| 3. [Basic Development Usage](#basic-development-usage) |
+| 4. [Roadmap](#roadmap) |
+| 5. [References](#references) |
 
-### Stack
+## Stack
 | Tool | Description |
 | --- | --- |
 | <a href="https://nodejs.org/en/" style="color: blue; text-decoration: underline; text-decoration-style: dotted;">Node.js</a> | DOM VM |
@@ -25,24 +25,28 @@ To be used with <a href="https://github.com/Duncan-Brain/firstmate" style="color
 | <a href="https://realfavicongenerator.net/" style="color: blue; text-decoration: underline; text-decoration-style: dotted;">FaviconGenerator</a> | Favicon Essentials |
 | <a href="https://unsplash.com/" style="color: blue; text-decoration: underline; text-decoration-style: dotted;">Unsplash</a> | Stock Photos |
 
-### Deployment Instructions
+## Deployment Instructions
 Please see instructions on <a href="https://github.com/Duncan-Brain/firstmate#boilerplate-setup" style="color: blue; text-decoration: underline; text-decoration-style: dotted;">Firstmate</a> for setting up the controller together with the boilerplate.
 
-### Basic Development Usage
-#### Installation
+## Basic Development Usage
+### Installation
 `~/boilerplate/frontend $ npm install`
 
-#### Dev server for manual testing
+### Dev server for manual testing
 `~/boilerplate/frontend $ npm run dev`
 
 Visit on localhost:3000
 
-#### Testing
+### Testing
 `~/boilerplate/frontend $ npm run test`
 
-#### Linting
+### Linting
 `~/boilerplate/frontend $ npm run lint`
 
+## Roadmap
+1. Improve mobile experience with mobile architecture
+2. Consider adding state management with Redux
+3. Use github for roadmapping
 
 ## References
 ### General
@@ -78,8 +82,3 @@ CSS - https://medium.com/trabe/a-comprehensive-guide-to-using-bem-with-react-14d
 React - https://github.com/airbnb/javascript/tree/master/react
 
 Javascript - https://google.github.io/styleguide/jsguide.html
-
-
-## TODO
-1. Improve mobile experience with mobile architecture
-2. Consider adding state management with Redux
