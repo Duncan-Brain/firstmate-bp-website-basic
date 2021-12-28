@@ -12,5 +12,6 @@ jobs:
 
       - name: Build And Test Frontend
         run: |
-          docker build -t temp-image -f ./frontend/Dockerfile.dev ./frontend
-          docker run temp-image npm run test:ci
+          cd frontend
+          npm ci
+          npm run test:ci

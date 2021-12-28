@@ -1,4 +1,4 @@
-name: Lint
+name: Build and Lint
 
 on:
   workflow_call:
@@ -10,7 +10,7 @@ jobs:
       - name: Check Out Repo
         uses: actions/checkout@v2
 
-      - name: Build And Test Frontend
+      - name: Build And Check Lint Frontend
         run: |
           docker build -t temp-image -f ./frontend/Dockerfile.dev ./frontend
-          docker run temp-image npm run lint
+          docker run temp-image npm lint

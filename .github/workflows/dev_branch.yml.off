@@ -8,8 +8,8 @@ on:
       - dev
 
 jobs:
-  call-lint:
-    uses: my-github-name/website-basic/.github/workflows/lint.yml@dev
+  call-build-lint:
+    uses: my-github-name/website-basic/.github/workflows/build_lint.yml@dev
 
   call-test:
     uses: my-github-name/website-basic/.github/workflows/test.yml@dev
