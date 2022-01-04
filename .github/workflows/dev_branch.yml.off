@@ -12,14 +12,17 @@ jobs:
     uses: my-github-name/website-basic/.github/workflows/build_lint.yml@dev
 
   call-test:
+    needs: [call-build-lint]
     uses: my-github-name/website-basic/.github/workflows/test.yml@dev
 
   call-push-images:
+    needs: [call-build-lint, call-test]
     uses: my-github-name/website-basic/.github/workflows/push_images.yml@dev
     with:
       DOCKER_IMAGE_NAME: dev-website-basic-image
       REPO_SHA: ${{ github.sha }}
-      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
-      DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
       DOCKER_IMAGE_CONTEXT: ./frontend
       DOCKER_FILE_PATH: ./frontend/Dockerfile.next
+    secrets:
+      DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+      DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}

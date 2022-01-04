@@ -13,4 +13,4 @@ jobs:
       - name: Build And Check Lint Frontend
         run: |
           docker build -t temp-image -f ./frontend/Dockerfile.dev ./frontend
-          docker run temp-image npm lint
+          docker run temp-image npm run lint
