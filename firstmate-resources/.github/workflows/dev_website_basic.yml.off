@@ -23,6 +23,7 @@ jobs:
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
 
   call-refresh-ingress-workflow:
+    needs: [call-deploy-workflow]
     uses: my-github-name/my-firstmate-repo/.github/workflows/refresh_ingress.yml@master
     secrets:
       DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
