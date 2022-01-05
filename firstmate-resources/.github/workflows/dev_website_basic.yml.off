@@ -12,7 +12,7 @@ on:
 
 jobs:
   call-deploy-workflow:
-    uses: my-github-name/my-firstmate-repo/.github/workflows/deploy.yml@master
+    uses: my-github-name/my-firstmate-repo/.github/workflows/deploy.yml@main
     with:
       REPO: my-github-name/website-basic
       REF: dev
@@ -24,7 +24,7 @@ jobs:
 
   call-refresh-ingress-workflow:
     needs: [call-deploy-workflow]
-    uses: my-github-name/my-firstmate-repo/.github/workflows/refresh_ingress.yml@master
+    uses: my-github-name/my-firstmate-repo/.github/workflows/refresh_ingress.yml@main
     secrets:
       DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}

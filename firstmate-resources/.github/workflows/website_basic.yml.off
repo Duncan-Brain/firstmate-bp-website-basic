@@ -12,10 +12,10 @@ on:
 
 jobs:
   call-deploy-script:
-    uses: my-github-name/my-firstmate-repo/.github/workflows/deploy.yml@master
+    uses: my-github-name/my-firstmate-repo/.github/workflows/deploy.yml@main
     with:
       REPO: my-github-name/website-basic
-      REF: master
+      REF: main
       DEPLOY_SCRIPT_NAME: deploy.sh
     secrets:
       TOKEN_GITHUB: ${{ secrets.TOKEN_GITHUB }}
@@ -24,7 +24,7 @@ jobs:
 
   call-refresh-ingress-script:
     needs: [call-deploy-script]
-    uses: my-github-name/my-firstmate-repo/.github/workflows/refresh_ingress.yml@master
+    uses: my-github-name/my-firstmate-repo/.github/workflows/refresh_ingress.yml@main
     secrets:
       DECRYPT_PASSPHRASE: ${{ secrets.DECRYPT_PASSPHRASE }}
       DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
